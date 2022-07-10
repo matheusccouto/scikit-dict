@@ -1,2 +1,2 @@
 # scikit-dict
-Define Scikit-Learn objects using dict
+Define Scikit-Learn objects from dict

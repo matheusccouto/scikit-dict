@@ -1,4 +1,4 @@
-"""Define Scikit-Learn objects using YAML"""
+"""Define Scikit-Learn objects from dict"""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ import importlib
 import inspect
 import pkgutil
 from types import ModuleType, FunctionType
+from typing import Dict
 
 import sklearn
 from sklearn.base import BaseEstimator, TransformerMixin
@@ -64,7 +65,9 @@ def _get_submodules(module):
     return []
 
 
-def get_all_sklearn_objects(module: ModuleType) -> FunctionType | BaseEstimator | TransformerMixin:
+def get_all_sklearn_objects(
+    module: ModuleType,
+) -> Dict[str, FunctionType | BaseEstimator | TransformerMixin]:
     """Get all objects from a module."""
     objs = {}
     submodules = _get_submodules(module)
