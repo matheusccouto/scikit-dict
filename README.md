@@ -43,9 +43,9 @@ It will create a dict with this content:
 ### Define a Scikit-Learn object from a dict.
 Recreate the original pipeline.
 ```python
-import skyaml
+import skdict
 
-skyaml.yaml2py(d)
+skyaml.load(d)
 ```
 
 ## Why should I use this?
