@@ -45,7 +45,7 @@ Recreate the original pipeline.
 ```python
 import skdict
 
-skyaml.load(d)
+skdict.load(d)
 ```
 
 ## Why should I use this?
